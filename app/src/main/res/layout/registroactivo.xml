@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="4dip">
+
+    <ImageView
+        android:id="@+id/imgFotoProveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/activo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/TxtTipoActivo" />
+
+    <TextView
+        android:id="@+id/TxtNombreActivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TxtNombreActivo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/TxtTipoActivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIPO"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/TxtMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MARCA"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/imgFotoProveedor" />
+
+    <TextView
+        android:id="@+id/TxtModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtNombreActivo"
+        android:layout_toStartOf="@+id/imgFotoProveedor"
+        android:text="MODELO" />
+
+    <TextView
+        android:id="@+id/TxtIDActivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TxtNombreActivo"
+        android:layout_alignParentStart="true"
+        android:text="IDACTIVO" />
+
+</RelativeLayout>
