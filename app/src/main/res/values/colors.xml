@@ -3,4 +3,32 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!--
+        COLORES PROPIOS
+    -->
+
+    <color name="colorLinea">#91cc35</color>
+    <color name="colorFondoBarra">#ffffff</color>
+    <color name="colorFondoCuerpo">#eeeeee</color>
+    <color name="colorTexto">#000000</color>
+    <color name="colorBlanco">#ffffff</color>
+    <color name="colorMenu">#5674a6a6</color>
+
+    <color name="colorGris">#ececec</color>
+    <color name="colorHint">#c4c3c3</color>
+    <color name="colorGrisOscuro">#999999</color>
+    <color name="colorRojo">#fa0404</color>
+    <color name="colorVerde">#3a9414</color>
+    <color name="colorVerdeClaro">#cbd9c1</color>
+    <color name="colorNegro">#000000</color>
+
+    <color name="colorTabNonFocusedSelect">#91cc35</color>
+    <color name="colorTabNonFocusedNone">#75a923</color>
+    <color name="colorTabFocusedSelect">#5e8423</color>
+    <color name="colorTabFocusedNone">#719c2e</color>
+
+    <color name="colorInfo">#5cc0de</color>
+    <color name="colorSuccess">#5db85d</color>
+    <color name="colorWarning">#f0ad4f</color>
+    <color name="colorDanger">#c9312e</color>
 </resources>
