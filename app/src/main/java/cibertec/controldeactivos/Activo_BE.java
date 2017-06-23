@@ -4,35 +4,35 @@ import java.io.Serializable;
 
 /**
  * Created by DIEGO on 4/06/2017.
- */
+ *///idactivo,nombre,tipo,marca,modelo
 
 public class Activo_BE implements Serializable{
     private int Codigo;
     private String Nombre;
     private String Tipo;
-    private String Ubicacion;
     private String Marca;
     private String Modelo;
+    private int Stock;
 
     public static int CAMPO_CODIGO = 0;
     public static int CAMPO_NOMBRE = 1;
 
-    public Activo_BE(int codigo, String nombre, String tipo, String ubicacion, String marca, String modelo) {
+    public Activo_BE(int codigo, String nombre, String tipo, String marca, String modelo, int stock) {
         Codigo = codigo;
         Nombre = nombre;
         Tipo = tipo;
-        Ubicacion = ubicacion;
         Marca = marca;
         Modelo = modelo;
+        Stock = stock;
     }
 
     public Activo_BE() {
         Codigo = 0;
         Nombre  = "";
         Tipo = "";
-        Ubicacion = "";
         Marca = "";
         Modelo = "";
+        Stock = 0;
     }
 
     public int getCodigo() {
@@ -59,13 +59,9 @@ public class Activo_BE implements Serializable{
         Tipo = tipo;
     }
 
-    public String getUbicacion() {
-        return Ubicacion;
-    }
+    public int getStock() { return Stock;  }
 
-    public void setUbicacion(String ubicacion) {
-        Ubicacion = ubicacion;
-    }
+    public void setStock(int stock) { Stock = stock;  }
 
     public String getMarca() {
         return Marca;
