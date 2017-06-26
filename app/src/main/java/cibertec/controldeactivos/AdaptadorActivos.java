@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import cibertec.controldeactivos.Entities.Activo_BE;
+
 /**
  * Created by DIEGO on 4/06/2017.
  */

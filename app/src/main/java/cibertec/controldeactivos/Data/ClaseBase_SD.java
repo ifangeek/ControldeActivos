@@ -1,4 +1,4 @@
-package cibertec.controldeactivos;
+package cibertec.controldeactivos.Data;
 
 import android.database.sqlite.SQLiteDatabase;
 

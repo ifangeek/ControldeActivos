@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ControlActivos.Principal"
+                  android:screenOrientation="userLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +20,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".NuevoActivo" />
-        <activity android:name=".Principal"></activity>
+        <activity android:name=".ControlActivos.MainActivity"
+                  android:screenOrientation="userLandscape"/>
+
+        <activity android:name=".Data.Activos.NuevoActivo"
+                  android:screenOrientation="userLandscape"/>
+
+        <activity android:name=".ControlActivos.QRCodeActivity"
+                  android:screenOrientation="userLandscape"/>
+
     </application>
 
 </manifest>

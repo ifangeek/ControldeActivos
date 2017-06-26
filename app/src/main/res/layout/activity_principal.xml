@@ -1,18 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="cibertec.controldeactivos.Principal">
+tools:context="cibertec.controldeactivos.ControlActivos.Principal">
 
 
-    <!-- GENERAL -->
+    <TextClock
 
-    <!-- Titulo Menu -->
+        android:id="@+id/txcHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:format24Hour="HH:mm:ss"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorTexto"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="79dp" />
 
+    <TextClock
 
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="dd/MM/yyyy"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="79dp"
+        android:layout_below="@+id/txcHora"
+        android:layout_alignStart="@+id/txcHora"
+        android:layout_marginTop="12dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/imgMantAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClock"
+        android:layout_marginTop="21dp"
+        android:layout_toStartOf="@+id/textClock"
+        style="?android:attr/borderlessButtonStyle"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <ImageButton
+        android:id="@+id/imgCodQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgMantAct"
+        android:layout_marginStart="47dp"
+        android:layout_toEndOf="@+id/textClock"
+        style="?android:attr/borderlessButtonStyle"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imgMantAct"
+        android:layout_below="@+id/imgMantAct"
+        android:layout_toStartOf="@+id/textClock"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Mant. Act." />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imgCodQR"
+        android:layout_below="@+id/imgCodQR"
+        android:layout_toEndOf="@+id/textClock"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Codigo QR" />
+
+</RelativeLayout>
 
 

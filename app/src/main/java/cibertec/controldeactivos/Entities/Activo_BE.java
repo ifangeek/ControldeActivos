@@ -1,4 +1,4 @@
-package cibertec.controldeactivos;
+package cibertec.controldeactivos.Entities;
 
 import java.io.Serializable;
 

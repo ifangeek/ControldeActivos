@@ -1,4 +1,4 @@
-package cibertec.controldeactivos;
+package cibertec.controldeactivos.Data;
 
 /**
  * Created by cibertec on 27/05/2017.

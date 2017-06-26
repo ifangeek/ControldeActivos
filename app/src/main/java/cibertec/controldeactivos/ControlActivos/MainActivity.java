@@ -1,4 +1,4 @@
-package cibertec.controldeactivos;
+package cibertec.controldeactivos.ControlActivos;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,6 +12,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import cibertec.controldeactivos.AdaptadorActivos;
+import cibertec.controldeactivos.Data.Activos.Activo_SD;
+import cibertec.controldeactivos.Entities.Activo_BE;
+import cibertec.controldeactivos.Data.FuncionesComunes;
+import cibertec.controldeactivos.Data.Activos.NuevoActivo;
+import cibertec.controldeactivos.R;
 
 public class MainActivity extends AppCompatActivity {
     private AdaptadorActivos oAdaptadorActivos = null;
@@ -33,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Activo_BE  oActivoSeleccionado = oListaActivo.get(position);
                 Intent oIntento = new Intent(getBaseContext(),NuevoActivo.class);
-                oIntento.putExtra("TIPOTRANSACCION",FuncionesComunes.ACTUALIZARREGISTRO);
+                oIntento.putExtra("TIPOTRANSACCION", FuncionesComunes.ACTUALIZARREGISTRO);
                 Log.v("FUNCION COMUN ","ACTUALIZAR");
                 oIntento.putExtra("OBJACTIVO",oActivoSeleccionado);
                 startActivityForResult(oIntento,1);

@@ -1,4 +1,4 @@
-package cibertec.controldeactivos;
+package cibertec.controldeactivos.Data.Activos;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,11 +18,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import cibertec.controldeactivos.Entities.Activo_BE;
+import cibertec.controldeactivos.Data.FuncionesComunes;
+import cibertec.controldeactivos.R;
+
 public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     //idactivo,nombre,tipo,marca,modelo
     EditText edtNombre =null;
-    Spinner spTipo,spModelo,spMarca;
+    Spinner spnTipo,spnModelo,spnMarca;
     EditText edtStock = null;
    /* String[] tipo;*/
     String[] marcas;
@@ -40,27 +44,23 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
         setContentView(R.layout.activity_nuevo_activo);
 
         edtNombre= (EditText) findViewById(R.id.edtNombre);
-        spTipo = (Spinner)findViewById(R.id.spTipo);
-        spMarca = (Spinner)findViewById(R.id.spMarca);
-        spModelo = (Spinner)findViewById(R.id.spModelo);
+        spnTipo = (Spinner)findViewById(R.id.spTipo);
+        spnMarca = (Spinner)findViewById(R.id.spMarca);
+        spnModelo = (Spinner)findViewById(R.id.spModelo);
         edtStock = (EditText)findViewById(R.id.edtStock);
         oBtnGrabar = (Button)findViewById(R.id.btnAgregar);
         oBtnEliminar = (Button)findViewById(R.id.btnEliminar);
         addItemsSpinnerTipo();
         cargarSpinnerMarcas();
-        MostrarDatos();
-        /*
-
-       /* Bundle oDatos = getIntent().getExtras();
+        Bundle oDatos = getIntent().getExtras();
         _TipoTransaccion = oDatos.get("TIPOTRANSACCION").toString();
+        Log.v("DATOS",oDatos.toString());
         _Activo_BE = (Activo_BE)oDatos.getSerializable("OBJACTIVO");
-       */
 
+        MostrarDatos();
 
 
     }
-
-
 
     public void MostrarDatos()
     {
@@ -72,13 +72,17 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
         if(_TipoTransaccion.equals(FuncionesComunes.ACTUALIZARREGISTRO))
         {
             oBtnEliminar.setVisibility(View.VISIBLE);
-            oBtnGrabar.setText("ELIMINAR");
+            oBtnGrabar.setText("ACTUALIZAR");
         }
-       /* edtNombre.setText(_Activo_BE.getNombre());
-        /*spTipo.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-        spModelo.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);*/
-        /*spMarca.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-        /*edtStock.setText(_Activo_BE.getStock());*/
+        edtNombre.setText(_Activo_BE.getNombre());
+        Log.v("ACT.","1"+_Activo_BE.getNombre());
+       /* spnMarca.getSelectedItem();
+        spTipo.getSelectedItem().toString();
+
+        spMarca.getSelectedItem().toString();
+        spModelo.getSelectedItem().toString();*/
+        edtStock.setText((""+ _Activo_BE.getStock()));
+        Log.v("ACT.","2"+_Activo_BE.getStock());
     }
 
     public void AgregarActivo(View v)
@@ -116,9 +120,9 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
         Log.v("llego hasta aca","");
         Activo_BE oActivo_BE = new Activo_BE(
                 CodigoActivo, edtNombre.getText().toString(),
-                spTipo.getSelectedItem().toString(),
-               spMarca.getSelectedItem().toString(),
-               spModelo.getSelectedItem().toString(),
+                spnTipo.getSelectedItem().toString(),
+               spnMarca.getSelectedItem().toString(),
+               spnModelo.getSelectedItem().toString(),
                 Integer.parseInt(edtStock.getText().toString()));
             Log.v("XDA", "PASS !");
             Long Resultado = oActivo_SD.RegistraModifica(oActivo_BE, _TipoTransaccion);
@@ -170,10 +174,10 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
                 this,R.array.MARCA,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Aplico el adaptador al Spinner.
-        this.spMarca.setAdapter(adapter);
+        this.spnMarca.setAdapter(adapter);
         marcas = getResources().getStringArray(R.array.MARCA);
-        this.spMarca.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-        Log.v("SPINNER",""+this.spMarca.toString());
+        this.spnMarca.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        Log.v("SPINNER",""+this.spnMarca.toString());
 
 
     }
@@ -192,7 +196,7 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
                             android.R.id.text1,modelo);
 
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    this.spModelo.setAdapter(adapter);
+                    this.spnModelo.setAdapter(adapter);
                     break;
                 case R.id.spModelo:
                     break;
@@ -209,16 +213,16 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
 
     public void addItemsSpinnerTipo()
     {
-        spTipo = (Spinner)findViewById(R.id.spTipo);
+        spnTipo = (Spinner)findViewById(R.id.spTipo);
         List<String> list = new ArrayList<String>();
         list.add("EQUIPO");
         list.add("AUTOMÓVIL");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
         Log.v("SPINNER",""+list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-       spTipo.setAdapter(dataAdapter);
-        this.spTipo.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-            Log.v("XDA",""+spTipo);
+       spnTipo.setAdapter(dataAdapter);
+        this.spnTipo.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+            Log.v("XDA",""+spnTipo);
 
 
     }/*
