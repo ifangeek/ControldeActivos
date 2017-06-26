@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by DIEGO on 4/06/2017.
- *///idactivo,nombre,tipo,marca,modelo
+ *///codigo,nombre,tipo,marca,modelo
 
 public class Activo_BE implements Serializable{
     private int Codigo;

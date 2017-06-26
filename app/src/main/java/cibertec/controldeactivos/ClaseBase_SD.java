@@ -3,7 +3,7 @@ package cibertec.controldeactivos;
 import android.database.sqlite.SQLiteDatabase;
 
 public class ClaseBase_SD {
-    private String _RutaBaseDatos="/data/data/cibertec.registroproveedor/controlactivos.db";
+    private String _RutaBaseDatos="/data/data/cibertec.controldeactivos/controlactivos.db";
     public ClaseBase_SD()
     {
     }
@@ -12,11 +12,12 @@ public class ClaseBase_SD {
         SQLiteDatabase odb=SQLiteDatabase.openDatabase(_RutaBaseDatos,null,
                 SQLiteDatabase.CREATE_IF_NECESSARY);
         odb.execSQL("CREATE TABLE IF NOT EXISTS ACTIVO(\n" +
-                "idactivo INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,\n" +
-                "nombre VARCHAR(80)  NULL,\n" +
-                "tipo VARCHAR(80)  NULL,\n" +
-                "marca VARCHAR(50)  NULL);\n"+
-                "modelo VARCHAR(50) NULL;\n");
+                "CODIGO INTEGER  NOT NULL PRIMARY KEY ,\n" +
+                "NOMBRE TEXT  NULL,\n" +
+                "TIPO TEXT  NULL,\n" +
+                "MARCA TEXT  NULL,\n"+
+                "MODELO TEXT NULL,\n"+
+                "STOCK INTEGER NULL);\n");
         odb.close();
     }
 

@@ -1,14 +1,67 @@
 <resources>
     <string name="app_name">Control de Activos</string>
+    <string name="marca_propmt">Elija una Marca</string>
+    <string name="tipo_propmt">Elija un Tipo </string>
 
-    <!-- Fondo Medio -->
-    <dimen name="fondo2_width">598.33dp</dimen>
-    <dimen name="fondo2_height">240.33dp</dimen>
-    <dimen name="fondo2_marginTop">66.66dp</dimen>
-    <dimen name="fondo2_marginLeft">0dp</dimen>
+    <array name="array_marca_a_modelo">
+        <item>@array/modelo_ASUS</item>
+        <item>@array/modelo_MSI</item>
+        <item>@array/modelo_TP_LINK</item>
+        <item>@array/modelo_LG</item>
+        <item>@array/modelo_SAMSUNG</item>
 
-    <!-- Fondo Medio Alternativo -->
-    <dimen name="fondo2alt_height">256.99dp</dimen>
-    <dimen name="fondo2alt_marginTop">50dp</dimen>
+
+
+    </array>
+
+
+    <!-- DATOS DEL COMBOBOX MARCA-->
+    <string-array name="MARCA">
+        <item>ASUS</item>
+        <item>MSI</item>
+        <item>TP-LINK</item>
+        <item>LG</item>
+        <item>SAMSUNG</item>
+
+    </string-array>
+    <string-array name="modelo_ASUS">
+        <item>Serie Zenbook</item>
+        <item>Gaming</item>
+        <item>Serie X</item>
+        <item>Serie N</item>
+        <item>Serie E</item>
+        <item>V Serie</item>
+        <item>Serie F</item>
+    </string-array>
+    <string-array name="modelo_MSI">
+        <item>Serie Gaming</item>
+        <item>Serie GT</item>
+        <item>Serie VR Ready</item>
+        <item>Serie GE</item>
+        <item>Tobii Eye-Tracking</item>
+        <item>Serie Prestige</item>
+        <item>Serie PX</item>
+        <item>Serie CX</item>
+        <item>Serie CR</item>
+        <item>Serie PE</item>
+    </string-array>
+    <string-array name="modelo_LG">
+        <item>OLED</item>
+        <item>UHD 4K</item>
+        <item>SUPER UHD 4K</item>
+        <item>UHD 4K HDR+</item>
+    </string-array>
+    <string-array name="modelo_TP_LINK">
+        <item>Talon AD7200</item>
+        <item>Archer </item>
+        <item>Deco</item>
+        <item>C7</item>
+        <item>WIFI</item>
+    </string-array>
+    <string-array name="modelo_SAMSUNG">
+        <item>Ultrabook</item>
+        <item>SlimBook </item>
+        <item>EliteBook</item>
+    </string-array>
 
 </resources>

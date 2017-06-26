@@ -52,8 +52,16 @@
         android:id="@+id/TxtIDActivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/TxtNombreActivo"
         android:layout_alignParentStart="true"
-        android:text="IDACTIVO" />
+        android:layout_alignParentTop="true"
+        android:text="TxtIDActivo" />
+
+    <TextView
+        android:id="@+id/TxtStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stock"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

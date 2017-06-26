@@ -10,10 +10,10 @@
         android:id="@+id/spModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="13dp"
+        android:spinnerMode="dropdown"
         android:layout_below="@+id/spMarca"
-        android:layout_alignStart="@+id/spMarca"
-        android:layout_alignEnd="@+id/spMarca" />
+        android:layout_alignStart="@+id/spMarca" />
 
     <TextView
         android:id="@+id/textView3"
@@ -93,7 +93,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView6"
         android:layout_alignStart="@+id/edtNombre"
-        android:layout_alignEnd="@+id/edtNombre" />
+        android:layout_alignEnd="@+id/edtNombre"
+        android:spinnerMode="dropdown" />
 
     <Spinner
         android:id="@+id/spMarca"
@@ -101,7 +102,9 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView7"
         android:layout_alignStart="@+id/spTipo"
-        android:layout_alignEnd="@+id/spTipo" />
+        android:layout_alignEnd="@+id/spTipo"
+        android:spinnerMode="dropdown"
+        android:prompt="@string/marca_propmt"/>
 
     <EditText
         android:id="@+id/edtStock"
@@ -120,7 +123,8 @@
         android:text="AGREGAR"
         android:layout_marginTop="41dp"
         android:layout_below="@+id/edtStock"
-        android:layout_toEndOf="@+id/textView5" />
+        android:layout_toEndOf="@+id/textView5"
+        android:onClick="AgregarActivo" />
 
     <Button
         android:id="@+id/btnEliminar"
