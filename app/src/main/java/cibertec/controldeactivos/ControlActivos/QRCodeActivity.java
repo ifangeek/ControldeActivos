@@ -101,6 +101,7 @@ public class QRCodeActivity extends AppCompatActivity {
                     Log.v("CONTENIDO :",""+contenido);
                 String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
                 formato.setText(format);
+                Log.v("XDA",format);
 
                     Log.v("FORMATO :",""+formato.toString());
                 Toast toast = Toast.makeText(this, "Content:" + contents + " Format:" + format, Toast.LENGTH_LONG);

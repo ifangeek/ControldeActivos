@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import cibertec.controldeactivos.R;
 
-public class Principal extends AppCompatActivity {
+public class PrincipalActivity extends AppCompatActivity {
 
 
     ImageButton imgBMant;
