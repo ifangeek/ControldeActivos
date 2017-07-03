@@ -38,19 +38,12 @@
         android:gravity="center"
         android:onClick="scanBar"
         android:text="Bar Code"
-        android:textSize="18dp" >
-    </Button>
+        android:textSize="18dp"></Button>
 
     <TextView
         android:id="@+id/txtContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Content" />
-
-    <TextView
-        android:id="@+id/txtFormat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Format" />
 
 </LinearLayout>

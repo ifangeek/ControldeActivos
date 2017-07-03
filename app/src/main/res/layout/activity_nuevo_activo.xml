@@ -134,5 +134,6 @@
         android:layout_alignBaseline="@+id/btnAgregar"
         android:layout_alignBottom="@+id/btnAgregar"
         android:layout_alignEnd="@+id/edtStock"
-        android:layout_marginEnd="21dp" />
+        android:layout_marginEnd="21dp"
+        android:onClick="EliminarRegistro"/>
 </RelativeLayout>

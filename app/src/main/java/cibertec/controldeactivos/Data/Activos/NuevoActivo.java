@@ -116,7 +116,6 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
         Log.v("XDA",nombre_modelo);
 
 */
-
         Log.v("llego hasta aca","");
         Activo_BE oActivo_BE = new Activo_BE(
                 CodigoActivo, edtNombre.getText().toString(),
@@ -127,12 +126,10 @@ public class NuevoActivo extends AppCompatActivity implements AdapterView.OnItem
             Log.v("XDA", "PASS !");
             Long Resultado = oActivo_SD.RegistraModifica(oActivo_BE, _TipoTransaccion);
 
-           /* Intent oRetorno = new Intent();
+           Intent oRetorno = new Intent();
             oRetorno.putExtra("Activo",oActivo_BE);
-            setResult(RESULT_OK,oRetorno);*/
+            setResult(RESULT_OK,oRetorno);
             finish();
-
-
 
     }
 

@@ -20,46 +20,37 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
 
+        imgBMant = (ImageButton) findViewById(R.id.imgMantAct);
+        imgBCodQR = (ImageButton) findViewById(R.id.imgCodQR);
 
-        imgBMant = (ImageButton)findViewById(R.id.imgMantAct);
-        imgBCodQR = (ImageButton)findViewById(R.id.imgCodQR);
+        IngresarMantenimiento();
+        IngresarQRCODE();
 
+    }
+
+        public void IngresarMantenimiento(){
         imgBMant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),
                         "Ventana Mantenimiento",Toast.LENGTH_SHORT).
                         show();
-
                 Intent oIntento = new Intent(getBaseContext(),MainActivity.class);
                 startActivity(oIntento);
             }
-
-
         });
-
+    }
+    public void IngresarQRCODE(){
         imgBCodQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),
-                        "Ventana QR",Toast.LENGTH_SHORT).
+                        "Ventana QR", Toast.LENGTH_SHORT).
                         show();
-
-                Intent oIntento1 = new Intent(getBaseContext(),QRCodeActivity.class);
+                Intent oIntento1 = new Intent(getBaseContext(), QRCodeActivity.class);
                 startActivity(oIntento1);
 
             }
         });
-
-
-
-
-
     }
-
-
-
-
-
-
 }

@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import cibertec.controldeactivos.R;
 
@@ -93,7 +92,12 @@ public class QRCodeActivity extends AppCompatActivity {
                 String contents = intent.getStringExtra("SCAN_RESULT");
                     Log.v("CONTENIDO :",""+contents);
                 contenido.setText(contents);
-                    //LOG.E SE GENERA DENTRO DE UN CATCH PARA HACER UN PRINT EN CONSOLA DE COLOR ROJO PARA VERIFICAR ALGÚN ERROR.
+                String dato = contenido.getText().toString();
+                Intent intento = new Intent(QRCodeActivity.this,ResultadoActivity.class);
+                intento.putExtra("DATO",dato);
+                startActivity(intento);
+
+                //LOG.E SE GENERA DENTRO DE UN CATCH PARA HACER UN PRINT EN CONSOLA DE COLOR ROJO PARA VERIFICAR ALGÚN ERROR.
                     //Log.e("QRCODE",e.getMessage());
 
 
@@ -103,9 +107,10 @@ public class QRCodeActivity extends AppCompatActivity {
                 formato.setText(format);
                 Log.v("XDA",format);
 
-                    Log.v("FORMATO :",""+formato.toString());
-                Toast toast = Toast.makeText(this, "Content:" + contents + " Format:" + format, Toast.LENGTH_LONG);
-                toast.show();
+
+                    /*Log.v("FORMATO :",""+formato.toString());
+                Toast toast = Toast.makeText(this, "Content:" + contents , Toast.LENGTH_LONG);
+                toast.show();*/
             }
         }
     }

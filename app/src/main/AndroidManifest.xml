@@ -10,20 +10,19 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".ControlActivos.PrincipalActivity">
-                  <!--android:screenOrientation="userLandscape" -->
+
+            <!-- android:screenOrientation="userLandscape" -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ControlActivos.MainActivity"/>
-        <activity android:name=".Data.Activos.NuevoActivo"/>
-        <activity android:name=".ControlActivos.QRCodeActivity"/>
-
+        <activity android:name=".ControlActivos.MainActivity" />
+        <activity android:name=".Data.Activos.NuevoActivo" />
+        <activity android:name=".ControlActivos.QRCodeActivity" />
+        <activity android:name=".ControlActivos.ResultadoActivity"></activity>
     </application>
 
 </manifest>
